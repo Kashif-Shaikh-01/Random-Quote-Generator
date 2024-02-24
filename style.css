@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Anta", sans-serif;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(61, 131, 97, 1) 11.2%,
+    rgba(28, 103, 88, 1) 91.1%
+  );
+  text-align: center;
+}
+.container {
+  display: flex;
+  width: 45%;
+  height: 50vh;
+  background: aliceblue;
+  border-radius: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.quote {
+  word-spacing: 2px;
+  overflow: hidden;
+  font-size: 1.1rem;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+.author {
+  margin: 15px auto 25px;
+  font-size: 1.4rem;
+}
+button {
+  margin: 20px 0px;
+  background: chocolate;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  text-align: center;
+  color: aliceblue;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+}
+button::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #212121;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.5s transform ease-out;
+  z-index: -1;
+}
+button:hover::after {
+  transform: translate(0, 0);
+}
+button:hover {
+  color: aliceblue;
+}
+@media screen and (max-width: 410px) {
+  body {
+    height: 80vh;
+  }
+  .container {
+    width: 75%;
+    height: 45vh;
+    border-radius: 20px;
+  }
+  .quote {
+    font-size: 0.9rem;
+    padding: 10px;
+    overflow: scroll;
+  }
+  .author {
+    font-size: 1.2rem;
+    margin: 16px auto;
+  }
+  button {
+    margin: 25px;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
